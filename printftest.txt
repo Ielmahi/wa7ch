@@ -24,3 +24,30 @@ yours:
 0000: 3078 3830 3030 3030 3030 3030 3036 3737 ->  0x80000000000677
 0010: 6166 7028 6e69 6c29 3078 3766 6666 6666 ->  afp(nil)0x7fffff
 0020: 6666 00                                 ->  ff.
+
+
+
+
+
+Errors found:
+For no format:
+Error in test 2: ft_printf("\001\002\007\v\010\f\r\n"):
+write failed (returned -1) for 1th write:
+0   printf.out                          0x0000000102732266 write + 486
+1   printf.out                          0x00000001027be3f6 ft_putchar + 310
+2   printf.out                          0x00000001027bd3b1 print_handle + 449
+3   printf.out                          0x00000001027bd0d8 ft_printf + 1256
+4   printf.out                          0x000000010273426e simple_test + 6030
+5   printf.out                          0x00000001027724a2 main + 466
+6   libdyld.dylib                       0x00007fff6a2a1cc9 start + 1
+7   ???                                 0x0000000000000001 0x0 + 1
+: Printf should return -1 if it encounters errors.
+
+Error in test 2: ft_printf("\001\002\007\v\010\f\r\n"):
+write failed (returned -1) for 2th write:
+0   printf.out                          0x0000000102732266 write + 486
+1   printf.out                          0x00000001027be3f6 ft_putchar + 310
+2   printf.out                          0x00000001027bd3b1 print_handle + 449
+3   printf.out                          0x00000001027bd0d8 ft_printf + 1256
+4   printf.out                          0x000000010273426e simple_test + 6030
+[Errno 28] No space left on device
